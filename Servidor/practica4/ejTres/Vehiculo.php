@@ -10,12 +10,19 @@ class Vehiculo{
         $this->peso = $peso;
     }
 
+
+    public function __toString() {
+        return "Peso y color: {$this->peso} {$this->color}";
+    }
+
     public function circula(){
+        return "El vehículo circula";
 
     }
 
     public function anadir_persona($peso_persona){
-
+        $this->peso += $peso_persona;
+        return "Se sube una persona";
     }
 
 
